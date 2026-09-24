@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="no" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Takk for meldingen</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+ 
+<body>
+    <div th:replace="~{fragments/layout :: nav}"></div>
+    <hr>
+    <h1>Takk for meldingen!</h1>
+    <p>
+        Takk, <span th:text="${navn}">besøkende</span>!
+        Meldingen din er mottatt.
+    </p>
+ 
+    <p>
+        <a href="/kontakt">Tilbake til kontaktskjema</a>
+    </p>
+    <hr>
+ 
+    <div th:replace="~{fragments/layout :: footer}"></div>
+ </body>
+</html>

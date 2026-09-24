@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam
 
 @Controller
-class KontaktController {
+class KontaktController(private val kontaktRepository: KontaktRepository) {
     @GetMapping("/kontakt")
     fun visSkjema(): String {
         return "kontakt"
@@ -21,7 +21,7 @@ class KontaktController {
         @RequestParam melding: String,
         model: Model
     ): String {
-        // Her kunne vi f.eks. lagret meldingen i en database
+        kontaktRepository.lagre(navn, melding)
         return "redirect:/takk?navn=$navn"
     }
 
