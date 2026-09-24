@@ -151,3 +151,31 @@ footer {
         font-size: 2rem;
     }
 }
+
+table {
+    margin-top: 25px;
+    border-collapse: collapse;
+    min-width: 600px;
+    background-color: #182438;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 14px 20px;
+    text-align: left;
+}
+
+th {
+    background-color: #243650;
+    color: #28b5ff;
+}
+
+td {
+    border-top: 1px solid #34445c;
+}
+
+tbody tr:hover {
+    background-color: #202f46;
+}
