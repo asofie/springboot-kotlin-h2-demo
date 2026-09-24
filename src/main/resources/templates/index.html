@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="no" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Min Spring Boot-side</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div th:fragment="nav">
+        <nav>
+            <a href="/">Hjem</a> | <a href="/om">Om</a> | <a href="/kontakt">Kontakt</a>
+        </nav>
+    </div>
+    <hr>
+    <h1 th:text="'Velkommen, ' + ${navn} + '!'"></h1>
+    <p>Dette er min aller første Spring Boot-side.</p>
+    <p>Denne siden har blitt besøkt <span th:text="${antallBesok}"></span> ganger</p>
+    <p th:if="${antallBesok > 100}">Wow, denne siden er populær!</p>
+    <p th:unless="${antallBesok > 100}">Del gjerne siden med flere.</p>
+    <br>
+    <hr>
+    <div th:fragment="footer">
+        <footer>&copy; 2026 Mitt Spring Boot-prosjekt</footer>
+    </div>
+</body>
+</html>

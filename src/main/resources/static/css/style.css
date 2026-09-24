@@ -1,0 +1,153 @@
+/* Google-lignende moderne design */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* Hovedinnhold */
+main,
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Navigasjon */
+nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+/* Kort */
+.card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Overskrifter */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #7dd3fc;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Oppgaveliste */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255,255,255,0.1);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: translateX(5px);
+    background: rgba(56,189,248,0.2);
+}
+
+/* Skjema */
+form {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #cbd5e1;
+}
+
+button {
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #7dd3fc;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #cbd5e1;
+}
+
+/* Mobil */
+@media (max-width: 700px) {
+    body {
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

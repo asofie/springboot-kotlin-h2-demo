@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="no" xmlns:th="http://thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Om meg</title>
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+    </head>
+    <body>
+        <div th:replace="~{fragments/layout :: nav}"></div>
+        <hr>
+        <h1>Om meg</h1>
+        <p>Jeg studerer informatikk og lærer meg Spring Boot.</p>
+        <hr>
+        <div th:replace="~{fragments/layout :: footer}"></div>
+    </body>
+</html>

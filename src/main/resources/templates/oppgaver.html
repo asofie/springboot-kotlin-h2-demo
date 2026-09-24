@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="no" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgaver</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <h1>Mine oppgaver</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Oppgave</th>
+                <th>Ferdig</th>
+                <th>Bruker</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="oppgave : ${oppgaver}">
+                <td th:text="${oppgave.tekst}"></td>
+                <td th:text="${oppgave.ferdig ? 'Ja' : 'Nei'}"></td>
+                <td th:text="${oppgave.navn}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
